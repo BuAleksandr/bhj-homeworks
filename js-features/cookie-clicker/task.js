@@ -1,11 +1,11 @@
-const timer = function () {
-  const p = document.getElementById('timer');
-  
-  p.textContent = Number(p.textContent) - 1;
-    if ((p.textContent) <= 0) {
-      alert('Вы победили!');
-      clearInterval(inervalID);
-    } 
-  }
+const cookie = document.getElementById('cookie');
+const clickerCounter = document.getElementById('clicker__counter');
 
-const inervalID = setInterval(timer, 1000);
+cookie.onclick = () => {
+  let clicks = clickerCounter.textContent++;
+    if (clicks % 2 == 0) {
+        cookie.width = 160;
+    } else {
+        cookie.width = 200;
+    }
+}
