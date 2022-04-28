@@ -1,7 +1,7 @@
 (() => {
     const choise = document.querySelectorAll('div > .hole');
     for (const i = 0; i < choise.length; i++) {
-        choise[i].addEventListener("click", myFunction);
+        choise[i].addEventListener("click", gameFunction);
     }
     function gameFunction() {
         const dead = document.getElementById("dead");
