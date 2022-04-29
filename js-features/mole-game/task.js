@@ -1,6 +1,6 @@
 (() => {
     const choise = document.querySelectorAll('div > .hole');
-    for (const i = 0; i < choise.length; i++) {
+    for (let i = 0; i < choise.length; i++) {
         choise[i].addEventListener("click", gameFunction);
     }
     function gameFunction() {
