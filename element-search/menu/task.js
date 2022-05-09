@@ -8,15 +8,15 @@ for (let i = 0; i < menuLink.length; i++) {
         if (menuItem[i].querySelector('.menu_sub') !== null && menuItem[i].querySelector('.menu_active') === null) {
             arItem.forEach((element, index) => {
                 if (element.querySelector('.menu_active')) {
-                    arItem[index].querySelector('.menu_sub').classList.remove('.menu_active');
+                    arItem[index].querySelector('.menu_sub').classList.remove('menu_active');
                 }
             });
 
-            menuItem[i].querySelector('.menu_sub').classList.add('.menu_active');
-            return menuItem[i].href = false;
+            menuItem[i].querySelector('.menu_sub').classList.add('menu_active');
+            return false;
         } else if (menuItem[i].querySelector('.menu_sub') !== null && menuItem[i].querySelector('.menu_active') !== null) {
             menuItem[i].querySelector('.menu_sub').classList.remove('menu_active');
-            return menuItem[i].href = false;
+            return false;
         }
     }
 }
