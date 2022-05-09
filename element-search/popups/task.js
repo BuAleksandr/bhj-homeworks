@@ -1,4 +1,5 @@
 const popup = document.getElementById('modal_main');
+popup.className = 'modal modal_active';
 const successPopup = document.getElementById('modal_success');
 const showSuccess = document.querySelector('.show-success');
 const closePopup = document.querySelectorAll("div.modal__close");
