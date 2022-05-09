@@ -1,7 +1,7 @@
 const menuItem = document.getElementsByClassName('menu__item');
 const menuLink = document.getElementsByClassName('menu__link');
 const menuActive = document.querySelector('.menu_active');
-const arItem = Array.from('menuItem');
+const arItem = Array.from(menuItem);
 
 for (let i = 0; i < menuLink.length; i++) {
     menuLink[i].onclick = function () {
