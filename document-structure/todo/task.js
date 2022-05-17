@@ -6,14 +6,14 @@ tasksForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   if (taskInput.value.trim()) {
-    taskList.innerHTML += '
+    taskList.innerHTML += `
     <div class="task">
       <div class="task__title">
         ${taskInput.value}
       </div>
       <a href="#" class="task__remove">&times;</a>
     </div>
-    '
+    `
     taskInput.value = "";
   }
 });
