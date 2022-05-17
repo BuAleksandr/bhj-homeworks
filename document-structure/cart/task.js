@@ -19,12 +19,12 @@ const addProductCart = function() {
   if (index !== -1) {
     listProducts[index].querySelector(".cart__product-count").textContent = Number(listProducts[index].querySelector(".cart__product-count").textContent) + Number(quantity);
   } else {
-    cart.innerHTML += '
+    cart.innerHTML += `
     <div class="cart__product" data-id="${idOfProduct}">
       <img class="cart__product-image" src="${srcOfProduct}">
       <div class="cart__product-count">${quantity}</div>
     </div>
-    ';
+    `;
   }
 
   this.closest(".product").querySelector(".product__quantity-value").textContent = 1;
