@@ -18,28 +18,28 @@ function inputMessage(e) {
     startTimer();
     let index = Math.floor(Math.random() * (answers.length));
     if (e.key === 'Enter' && input.value !== '') {
-        messages.innerHTML += '
+        messages.innerHTML += `
         <div class="message message_client">
             <div class="message__time">${`${(new Date).getHours()}:${(new Date).getMinutes()}`}</div>
             <div class="message__text">${input.value}</div>
-        </div>'
+        </div>`
         input.value = '';
-        messages.innerHTML += '
+        messages.innerHTML += `
         <div class="message">
             <div class="message__time">${`${(new Date).getHours()}:${(new Date).getMinutes()}`}</div>
             <div class="message__text">${answers[index]}</div>
-        </div>'
+        </div>`
     };
     messages.scrollIntoView(false);
 };
 
 function question() {
     if (widget.classList.contains('chat-widget_active')) {
-        messages.innerHTML += '
+        messages.innerHTML += `
         <div class="message">
             <div class="message__time">${`${(new Date).getHours()}:${(new Date).getMinutes()}`}</div>
             <div class="message__text">Вы еще здесь?</div>
-        </div>'
+        </div>`
     };
     messages.scrollIntoView(false);
 };
